@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>notice</title>
+</head>
+<body>
+    <div th:each="notice : ${notices}">
+        <img src="https://placehold.co/300">
+        <h1 th:text="${notice.title}"></h1>
+        <p th:text="${notice.date}"></p>
+    </div>
+</body>
+</html>

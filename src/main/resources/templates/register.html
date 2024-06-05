@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <div th:replace="~{nav.html::navbar}"></div>
+    <form action="/register" method="POST">
+        <input type="text" name="username" placeholder="아이디">
+        <input type="password" name="password" placeholder="비밀번호">
+        <input type="text" name="displayName" placeholder="닉네임">
+        <button>회원가입</button>
+    </form>
+</body>
+</html>

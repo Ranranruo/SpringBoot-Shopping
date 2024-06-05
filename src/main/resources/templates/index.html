@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <div th:replace="~{ nav.html::navbar }"></div>
+    <h4>메인페이지 입니디.</h4>
+    <button>요청</button>
+</body>
+<script>
+    document.querySelector('button').addEventListener("click", ()=>{
+        fetch("test", {
+            method: 'POST',
+            headers : {
+                'Content-Type': "application/json",
+            },
+            body: JSON.stringify({
+                "name": "shin",
+            })
+        });
+
+    })
+</script>
+</html>
